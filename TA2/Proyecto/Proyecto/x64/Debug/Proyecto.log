@@ -1,0 +1,5 @@
+﻿  MainGame.cpp
+E:\UPC\Ciclo 5\Fundamentos de la Teoría de Juegos\Proyectos\TA2\Proyecto\Proyecto\MainGame.cpp(102,19): warning C4305: '+=': truncamiento de 'double' a 'float'
+  main.cpp
+  Generando código...
+  Proyecto.vcxproj -> E:\UPC\Ciclo 5\Fundamentos de la Teoría de Juegos\Proyectos\TA2\Proyecto\x64\Debug\Proyecto.exe
