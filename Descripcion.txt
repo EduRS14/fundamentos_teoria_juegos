@@ -1,1 +1,3 @@
-En este branch llamado TA01, está disponible el programa modificado por mi persona para poder cumplir con los requerimientos de la TA1.
+En este branch llamado TA03, está disponible el programa modificado por mi persona para poder cumplir con los requerimientos de la TA3.
+
+Requerimiento: Dibujar a los zombies del juego.
