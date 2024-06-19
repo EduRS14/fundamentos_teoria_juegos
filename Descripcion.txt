@@ -1,3 +1,3 @@
-En este branch llamado TA03, está disponible el programa modificado por mi persona para poder cumplir con los requerimientos de la TA3.
+En este branch llamado TA04, está disponible el programa modificado por mi persona para poder cumplir con los requerimientos de la TA4.
 
-Requerimiento: Dibujar a los zombies del juego.
+Requerimiento: Implementar la funcionalidad de movimiento de los zombies del juego.

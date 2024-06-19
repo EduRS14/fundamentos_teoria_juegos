@@ -21,6 +21,8 @@ class MainGame
 private:
 	int width;
 	int height;
+	float temporizadorFatiga; // Variable incluida
+	int condicionFatiga; // Variable incluida 
 	SpriteBatch spriteBatch;
 	SpriteBatch hudBatch;
 	vector<Level*> levels;

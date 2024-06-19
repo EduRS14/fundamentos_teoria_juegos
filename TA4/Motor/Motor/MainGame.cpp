@@ -13,6 +13,10 @@ MainGame::MainGame() {
 	height = 600;
 	gameState = GameState::PLAY;
 	camera2D.init(width, height);
+
+	// Inicializamos las nuevas variables
+	temporizadorFatiga = 0.0f;
+	condicionFatiga = -1;
 }
 
 MainGame::~MainGame() {
@@ -117,7 +121,7 @@ void MainGame::initLevel() {
 	for (size_t i = 0; i < zombiePosition.size(); i++)
 	{
 		zombies.push_back(new Zombie());
-		zombies.back()->init(2.0f, zombiePosition[i]);
+		zombies.back()->init(3.0f, zombiePosition[i]);
 	}
 }
 
@@ -181,6 +185,26 @@ void MainGame::update() {
 		for (size_t i = 0; i < humans.size(); i++)
 		{
 			humans[i]->update(levels[currentLevel]->getLevelData(), humans, zombies);
+		}
+
+		// Actualizamos los zombies
+		for (size_t i = 0; i < zombies.size(); i++)
+		{
+			zombies[i]->update(levels[currentLevel]->getLevelData(), humans, zombies);
+			zombies[i]->condicionFatiga(condicionFatiga); // Actualizamos la fatiga de los zombies
+		}
+
+		// Actualizamos cada 5 segundos el estado de fatiga de los zombies
+		if (temporizadorFatiga > 10.0f && condicionFatiga == 1) {
+			condicionFatiga *= -1; // Cambiamos el estado de fatiga
+			temporizadorFatiga = 0.0f; // Reseteamos el temporizador
+		}
+		else if (temporizadorFatiga > 5.0f && condicionFatiga == -1) {
+			condicionFatiga *= -1; // Cambiamos el estado de fatiga
+			temporizadorFatiga = 0.0f; // Reseteamos el temporizador
+		}
+		else {
+			temporizadorFatiga += 0.01f;
 		}
 	}
 }

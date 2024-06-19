@@ -1,9 +1,9 @@
 #include <SDL/SDL.h>
 #include "MainGame.h"
 
-// Entrega TA3
+// Entrega TA4
 
-// Los cambios realizados en el motor para dibujar a los zombies 
+// Los cambios realizados en el motor para implementar a los zombies 
 // se realizaron en las clases MainGame y Zombie.
 
 int main(int argc, char** argv) {
